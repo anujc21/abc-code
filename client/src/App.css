@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+* {
+	font-family: Nunito;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    display: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 10px;
+}
+
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.6);
+	z-index: 100;
+}
+
+.loaderCircle1{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	opacity: 0.6;
+	border-radius: 50%;
+	border-top: 5px solid #000;
+	border-right: 5px solid #000;
+	transform: translate(-50%, -50%);
+	animation: loaderRotate 2s linear infinite;
+}
+
+.loaderCircle2{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	opacity: 0.6;
+	border-radius: 50%;
+	border-right: 4px solid #000;
+	border-bottom: 4px solid #000;
+	transform: translate(-50%, -50%);
+	animation: loaderRotate 1.5s linear infinite reverse;
+}
+
+.loaderCircle3{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	opacity: 0.6;
+	border-radius: 50%;
+	border-bottom: 3px solid #000;
+	border-left: 3px solid #000;
+	transform: translate(-50%, -50%);
+	animation: loaderRotate 1s linear infinite;
+}
+
+.app{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header{
+	width: 100%;
+	height: 70px;
+	background: #000;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+	z-index: 99;
+	display: flex;
+	align-items: center;
+}
+
+.headerIcon{
+	margin: -2px 3px 0px 20px;
+	color: #fff;
+	font-size: 30px;
+}
+
+.headerTitle{
+	color: #fff;
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-grow: 1;
+	background: #fff;
+}
+
+.prompt{
+	margin: 30px 0px 30px 30px;
+	width: 20%;	
+	height: 40%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.promptTextArea{
+	width: 100%;
+	height: 90%;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	resize: none;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.controls{
+	margin: 30px 0px 0px 0px;
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.controlButton{
+	width: 200px;
+	height: 40px;
+	color: #fff;
+	font-weight: bold;
+	margin: 0px 5px;
+	border-radius: 5px;
+	background: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+	transition: 0.2s transform;
+}
+
+.controlButton:hover{
+	cursor: pointer;
+}
+
+.controlButton:active{
+	transform: scale(0.9);
+}
+
+.editor{
+	margin: 30px 0px 30px 30px;
+	width: 35%;
+	height: 90%;
+	max-height: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.editorHeader{
+	font-weight: bold;
+	width: 100%;
+	color: #fff;
+	background: #000;
+	border-bottom: 2px solid #fff;
+	border-radius: 10px 10px 0px 0px;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.editorHeaderText{
+	margin: 5px 10px;
+}
+
+.editorBox{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.editorTextArea{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	resize: none;
+	border: none;
+	outline: none;
+	border-radius: 0px 0px 10px 10px;
+	color: #fff;
+	background: #000;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.editorHighlight{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	resize: none;
+	border: none;
+	outline: none;
+	border-radius: 0px 0px 10px 10px;
+	color: #fff;
+	background: #000;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.output{
+	margin: 30px 20px;
+	width: 40%;
+	height: 90%;
+	max-height: 90%;
+	border-radius: 10px;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.outputFrame{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 10px;
+}
+
+@keyframes loaderRotate{
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
